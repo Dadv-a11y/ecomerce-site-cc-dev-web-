@@ -1,0 +1,388 @@
+
+     [
+      {
+        "nom": "iPhone 13",
+        "couleur": "Noir",
+        "prix": 799,
+        "src": "image/telephones-image/iphone 13.jpg",
+        "caracteristiques": {
+          "écran": "6,1 pouces",
+          "processeur": "A15 Bionic",
+          "mémoire": "6 Go de RAM"
+        },
+        "categorie": "Téléphones"
+      },
+      {
+        "nom": "MacBook Air",
+        "couleur": "Argent",
+        "prix": 999,
+         "src": "image/ordinateur-image/mac book air.jpg",
+        "caracteristiques": {
+          "écran": "13,3 pouces",
+          "processeur": "Intel Core i5",
+          "mémoire": "8 Go de RAM"
+        },
+        "categorie": "Ordinateurs"
+      },
+      {
+        "nom": "Samsung 4K TV",
+        "couleur": "Noir",
+        "prix": 1299,
+         "src": "image/television-image/samsung 4k tv.jpg",
+        "caracteristiques": {
+          "écran": "49 pouces",
+          "résolution": "3840 x 2160",
+          "technologie": "LED"
+        },
+        "categorie": "Télévisions"
+      },
+      {
+        "nom": "Google Pixel 6",
+        "couleur": "Blanc",
+        "prix": 699,
+         "src": "image/telephones-image/Google Pixel 6 Pro.jpg",
+        "caracteristiques": {
+          "écran": "6,4 pouces",
+          "processeur": "Google Tensor",
+          "mémoire": "6 Go de RAM"
+        },
+        "categorie": "Téléphones"
+      },
+      {
+        "nom": "Dell Inspiron 15",
+        "couleur": "Gris",
+        "prix": 899,
+         "src": "image/ordinateur-image/DELL-INSPIRON-15.webp",
+        "caracteristiques": {
+          "écran": "15,6 pouces",
+          "processeur": "Intel Core i7",
+          "mémoire": "16 Go de RAM"
+        },
+        "categorie": "Ordinateurs"
+      },
+      {
+        "nom": "LG OLED TV",
+        "couleur": "Noir",
+        "prix": 1999,
+         "src": "image/television-image/LG OLED TV.webp",
+        "caracteristiques": {
+          "écran": "55 pouces",
+          "résolution": "3840 x 2160",
+          "technologie": "OLED"
+        },
+        "categorie": "Télévisions"
+      },
+      {
+        "nom": "OnePlus 9 Pro",
+        "couleur": "Bleu",
+        "prix": 899,
+         "src": "image/telephones-image/OnePlus 9 Pro.webp",
+        "caracteristiques": {
+          "écran": "6,7 pouces",
+          "processeur": "Qualcomm Snapdragon 888",
+          "mémoire": "8 Go de RAM"
+        },
+        "categorie": "Téléphones"
+      },
+      {
+        "nom": "HP Envy x360",
+        "couleur": "Argent",
+        "prix": 799,
+         "src": "image/ordinateur-image/HP Envy x360.png",
+        "caracteristiques": {
+          "écran": "15,6 pouces",
+          "processeur": "AMD Ryzen 7",
+          "mémoire": "16 Go de RAM"
+        },
+        "categorie": "Ordinateurs"
+      },
+      {
+        "nom": "Sony Bravia 4K TV",
+        "couleur": "Noir",
+        "prix": 1499,
+         "src": "image/television-image/Sony Bravia 4K TV.avif",
+        "caracteristiques": {
+          "écran": "49 pouces",
+          "résolution": "3840 x 2160",
+          "technologie": "LED"
+        },
+        "categorie": "Télévisions"
+      },
+      {
+        "nom": "Xiaomi Redmi 9",
+        "couleur": "Rouge",
+        "prix": 499,
+         "src": "image/telephones-image/Xiaomi Redmi 9.webp",
+        "caracteristiques": {
+          "écran": "6,5 pouces",
+          "processeur": "MediaTek Helio G80",
+          "mémoire": "4 Go de RAM"
+        },
+        "categorie": "Téléphones"
+      },
+      {
+        "nom": "Asus ZenBook 14",
+        "couleur": "Gris",
+        "prix": 699,
+         "src": "image/ordinateur-image/Asus ZenBook 14.jpg",
+        "caracteristiques": {
+          "écran": "14 pouces",
+          "processeur": "Intel Core i5",
+          "mémoire": "8 Go de RAM"
+        },
+        "categorie": "Ordinateurs"
+      },
+          {
+            "nom": "Samsung Galaxy S22",
+            "couleur": "Bleu",
+            "prix": 899,
+             "src": "image/telephones-image/Samsung Galaxy S22.jpg",
+            "caracteristiques": {
+              "écran": "6,2 pouces",
+              "processeur": "Qualcomm Snapdragon 888",
+              "mémoire": "8 Go de RAM"
+            },
+            "categorie": "Téléphones"
+          },
+          {
+            "nom": "Lenovo ThinkPad X1",
+            "couleur": "Noir",
+            "prix": 1299,
+             "src": "image/ordinateur-image/Lenovo ThinkPad X1.jpg",
+            "caracteristiques": {
+              "écran": "14 pouces",
+              "processeur": "Intel Core i7",
+              "mémoire": "16 Go de RAM"
+            },
+            "categorie": "Ordinateurs"
+          },
+          {
+            "nom": "TCL 8K TV",
+            "couleur": "Noir",
+            "prix": 2499,
+             "src": "image/television-image/TCL 8K TV.png",
+            "caracteristiques": {
+              "écran": "65 pouces",
+              "résolution": "7680 x 4320",
+              "technologie": "LED"
+            },
+            "categorie": "Télévisions"
+          },
+          {
+            "nom": "Google Pixel 6 Pro",
+            "couleur": "Blanc",
+            "prix": 999,
+             "src": "image/telephones-image/Google Pixel 6 Pro.jpg",
+            "caracteristiques": {
+              "écran": "6,7 pouces",
+              "processeur": "Google Tensor",
+              "mémoire": "12 Go de RAM"
+            },
+            "categorie": "Téléphones"
+          },
+          {
+            "nom": "Dell XPS 13",
+            "couleur": "Argent",
+            "prix": 1099,
+             "src": "image/ordinateur-image/Dell XPS 13.jpg",
+            "caracteristiques": {
+              "écran": "13,4 pouces",
+              "processeur": "Intel Core i7",
+              "mémoire": "16 Go de RAM"
+            },
+            "categorie": "Ordinateurs"
+          },
+          {
+            "nom": "LG NanoCell TV",
+            "couleur": "Noir",
+            "prix": 1799,
+             "src": "image/television-image/LG NanoCell TV.avif",
+            "caracteristiques": {
+              "écran": "55 pouces",
+              "résolution": "3840 x 2160",
+              "technologie": "NanoCell"
+            },
+            "categorie": "Télévisions"
+          },
+          {
+            "nom": "OnePlus 9 Lite",
+            "couleur": "Bleu",
+            "prix": 699,
+             "src": "image/telephones-image/OnePlus 9 Lite.jfif",
+            "caracteristiques": {
+              "écran": "6,5 pouces",
+              "processeur": "Qualcomm Snapdragon 888",
+              "mémoire": "6 Go de RAM"
+            },
+            "categorie": "Téléphones"
+          },
+          {
+            "nom": "HP Pavilion Gaming",
+            "couleur": "Noir",
+            "prix": 999,
+             "src": "image/ordinateur-image/HP Pavilion Gaming.webp",
+            "caracteristiques": {
+              "écran": "15,6 pouces",
+              "processeur": "AMD Ryzen 7",
+              "mémoire": "16 Go de RAM"
+            },
+            "categorie": "Ordinateurs"
+          },
+          {
+            "nom": "Sony Bravia OLED TV",
+            "couleur": "Noir",
+            "prix": 2299,
+             "src": "image/television-image/Sony Bravia 4K TV.avif",
+            "caracteristiques": {
+              "écran": "55 pouces",
+              "résolution": "3840 x 2160",
+              "technologie": "OLED"
+            },
+            "categorie": "Télévisions"
+          },
+          {
+            "nom": "Xiaomi Mi 11",
+            "couleur": "Rouge",
+            "prix": 799,
+             "src": "image/telephones-image/Xiaomi Mi 11.png",
+            "caracteristiques": {
+              "écran": "6,8 pouces",
+              "processeur": "Qualcomm Snapdragon 888",
+              "mémoire": "8 Go de RAM"
+            },
+            "categorie": "Téléphones"
+          },
+              {
+                "nom": "Asus ROG Zephyrus",
+                "couleur": "Noir",
+                "prix": 1499,
+                 "src": "image/ordinateur-image/Asus ROG Zephyrus.png",
+                "caracteristiques": {
+                  "écran": "15,6 pouces",
+                  "processeur": "Intel Core i9",
+                  "mémoire": "32 Go de RAM"
+                },
+                "categorie": "Ordinateurs"
+              },
+              {
+                "nom": "Samsung Galaxy Tab S8",
+                "couleur": "Bleu",
+                "prix": 799,
+                 "src": "image/telephones-image/Samsung Galaxy Tab S8.jpg",
+                "caracteristiques": {
+                  "écran": "11 pouces",
+                  "processeur": "Qualcomm Snapdragon 888",
+                  "mémoire": "6 Go de RAM"
+                },
+                "categorie": "Tablettes"
+              },
+              {
+                "nom": "LG C9 OLED TV",
+                "couleur": "Noir",
+                "prix": 2999,
+                 "src": "image/television-image/LG C9 OLED TV.jpg",
+                "caracteristiques": {
+                  "écran": "65 pouces",
+                  "résolution": "3840 x 2160",
+                  "technologie": "OLED"
+                },
+                "categorie": "Télévisions"
+              },
+              {
+                "nom": "Google Pixelbook Go",
+                "couleur": "Blanc",
+                "prix": 999,
+                 "src": "image/telephones-image/google pixel 6.jfif",
+                "caracteristiques": {
+                  "écran": "13,3 pouces",
+                  "processeur": "Intel Core i5",
+                  "mémoire": "8 Go de RAM"
+                },
+                "categorie": "Ordinateurs"
+              },
+              {
+                "nom": "OnePlus 9 Pro 5G",
+                "couleur": "Bleu",
+                "prix": 1099,
+                 "src": "image/telephones-image/OnePlus 9 Pro 5G.png",
+                "caracteristiques": {
+                  "écran": "6,7 pouces",
+                  "processeur": "Qualcomm Snapdragon 888",
+                  "mémoire": "12 Go de RAM"
+                },
+                "categorie": "Téléphones"
+              },
+              {
+                "nom": "Dell Inspiron 24 5000",
+                "couleur": "Gris",
+                "prix": 699,
+                 "src": "image/ordinateur-image/Dell Inspiron 24 5000.webp",
+                "caracteristiques": {
+                  "écran": "23,8 pouces",
+                  "processeur": "Intel Core i3",
+                  "mémoire": "4 Go de RAM"
+                },
+                "categorie": "Ordinateurs"
+              },
+              {
+                "nom": "Sony WH-1000XM4",
+                "couleur": "Noir",
+                "prix": 349,
+                 "src": "image/ordinateur-image/Sony-WH-1000XM4-Wireless-Noise-Canceling-Over-the-Ear-Headphones-with-Google-Assistant-Black_0dfeda7b-df98-488a-a190-67b54d2fb40d.2bc50af0f21a464edd51076af3c85e92.webp",
+                "caracteristiques": {
+                  "type": "Casque audio",
+                  "technologie": "Bluetooth",
+                  "autonomie": "30 heures"
+                },
+                "categorie": "Accessoires"
+              },
+              {
+                "nom": "Xiaomi Redmi Note 10",
+                "couleur": "Rouge",
+                "prix": 299,
+                 "src": "image/telephones-image/Xiaomi Redmi Note 10.webp",
+                "caracteristiques": {
+                  "écran": "6,5 pouces",
+                  "processeur": "Qualcomm Snapdragon 678",
+                  "mémoire": "4 Go de RAM"
+                },
+                "categorie": "Téléphones"
+              },
+              {
+                "nom": "HP Envy Curved AIO 34",
+                "couleur": "Argent",
+                "prix": 1299,
+                 "src": "image/ordinateur-image/HP Envy Curved AIO 34.webp",
+                "caracteristiques": {
+                  "écran": "34 pouces",
+                  "processeur": "Intel Core i7",
+                  "mémoire": "16 Go de RAM"
+                },
+                "categorie": "Ordinateurs"
+              },
+              {
+                "nom": "TCL 40S325",
+                "couleur": "Noir",
+                "prix": 299,
+                 "src": "image/television-image/TCL 40S325.png",
+                "caracteristiques": {
+                  "écran": "40 pouces",
+                  "résolution": "1920 x 1080",
+                  "technologie": "LED"
+                },
+                "categorie": "Télévisions"
+              },
+              {
+                "nom": "TCL 40S325",
+                "couleur": "Noir",
+                "prix": 299,
+                 "src": "image/television-image/TCL 40S325.png",
+                "caracteristiques": {
+                  "écran": "40 pouces",
+                  "résolution": "1920 x 1080",
+                  "technologie": "LED"
+                },
+                "categorie": "radio"
+              }
+            
+        ]

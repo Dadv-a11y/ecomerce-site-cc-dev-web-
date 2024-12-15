@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/image/icon/petit logo.png" type="image/x-icon">
+    
+    <title>Accueil</title>
+
+</head>
+<body>
+    <header>
+        <span><a href="index.html"><img src="image/icon/petit logo.png" alt="logo"></a></span>
+        <div><a href="page d'inscription/pagedinscription.html">S'INSCRIRE</a>
+              <a href="page de connexion/connexion.html">CONNECTEZ-VOUS</a>
+             <div id="user-data"></div>  
+        </div>
+        <div>
+             <button onclick="login()"><img src="/image/icon/utilisateur.png" alt="user"></button>
+             <button ><img src="/image/icon/panier.png" alt="panier"><span id="panier"></span></button>
+        </div>
+    </header>
+    <main>
+        <div class="tri">
+        <button><img src="/image/icon/menu.png" alt="menu" onclick="fillMenu()" id="menu-icon"></button>
+        <div class="barreDeRecherche"><input type="text" placeholder="rechercher"  id="rechercher"><img src="image/icon/loupe.png" alt="rechercher" onclick="ResultatRecherche()"></div>
+      </div>
+        <div class="menu" id="menu">
+           <!-- <ul>
+            <li></li>
+           </ul> -->
+        </div>
+       
+        <div  id="best-product">
+          <div id="product">
+            <span id="description"></span>
+            <!-- <p>nom<br>description<br><span class="prix">prix</span></p> -->
+            <button class="acheter">acheter</button>
+            <div class="nav-button"><button class="change" id="2"></button><button class="change" id="0"></button><button class="change" id="1"></button></div>
+          </div>
+          <!-- <div class="image">
+               
+          </div>  -->
+        </div>
+        <div class="categorie" id="categorie">
+            <!-- <p>categorie1</p>
+          <div class="categoriei">
+           <div class="produits">
+            <div class="produit"><p>nom <br>prix</p></div>
+            <div class="produit"><p>nom <br>prix</p></div>
+            <div class="produit"><p>nom <br>prix</p></div>
+            <div class="produit"><p>nom <br>prix</p></div>
+           </div>
+            <button class="plus">plus</button>
+          </div> -->
+        </div>
+        <footer>
+            entrer les contacts et liens vers les reseaux sociaux
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/image/icon/petit logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="pageproduit.css">
+    <title id="title">produit</title>
+</head>
+<body>
+    <header>
+        <span><a href="../index.html"><img src="../image/icon/petit logo.png" alt="logo"></a></span>
+        <div><a href="../page d'inscription/pagedinscription.html">S'INSCRIRE</a>
+              <a href="../page de connexion/connexion.html">CONNECTEZ-VOUS</a>
+             <div id="user-data"></div>  
+        </div>
+        <div>
+             <button onclick="login()"><img src="../image/icon/utilisateur.png" alt="user"></button>
+             <button><img src="../image/icon/panier.png" alt="panier"><span id="panier"></span></button>
+        </div>
+    </header>
+    <main>
+        <div class="tri">
+            <button><img src="../image/icon/menu.png" alt="menu" onclick="fillMenu()" id="menu-icon"></button>
+            <div class="barreDeRecherche"><input type="text" placeholder="rechercher"  id="rechercher"><img src="../image/icon/loupe.png" alt="rechercher" onclick="ResultatRecherche()"></div>
+          </div>
+            <div class="menu" id="menu">
+               
+            </div>
+            <div id="carteProduit">
+                <!-- <div class="presentationproduit">
+                    <div class="imageproduit">
+                        <img src="../image/ordinateur-image/Asus ROG Zephyrus.png"  >
+                    </div>
+                    <div class="descriptionproduit">
+                        <p>nom <span>djifack</span> <br>
+                           prenom <span>daril</span> <br>
+                           texte <span></span></p>
+                           <button>ajouter au panier</button> 
+                </div> -->
+                </div>     
+            </div>
+    </main>
+    
+</body>
+<script src="pageproduit.js"></script>
+</html>

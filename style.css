@@ -1,0 +1,209 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: black solid;
+    /* padding: 1em; */
+}
+header img{
+    width: 50px;
+    height: 100%;
+}
+header div{
+    padding: 1em;
+}
+header div button img{
+    width: 25px;
+}
+header div button{
+    background-color: white;
+    border: none;
+}
+header div a{
+    padding-left: 10px;
+    color: black;
+    text-decoration: none;
+}
+.tri{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+.tri input{
+    border: black solid; 
+    border-radius: 50px ;
+    padding: 0.5em;
+    text-align: center;
+}
+ 
+.tri button img{
+    width: 20px;
+}
+.tri button{
+    background-color: white;
+    border: none;
+}
+#user-data{
+    font-size: 12px;
+    font-weight: bold;
+    display: none;
+    border: black solid;
+    border-radius: 20px;
+    background-color: white;
+    position: absolute;
+    right: 70px;
+    z-index: 1;
+    padding: 10px;
+}
+#user-data span{
+  padding: 0 10px;
+}
+.barreDeRecherche{
+ 
+  border-radius: 50px;
+}
+.barreDeRecherche img{
+    width: 20px;
+   position: relative;
+   top: 5px;
+   right: 30px;
+}
+.menu{
+    background-color: white; 
+    position: absolute;
+    padding: 0.5em 1em;
+    border: black solid;
+    width: 15em;
+     z-index: 1; 
+    display: none; 
+}
+li{
+    padding: 0.5em 0;
+    border-bottom:black solid ;
+    list-style: none;
+}
+li button{
+    border: none;
+    background-color: white;
+}
+#best-product{
+    font-size: 1.5em;
+    text-align: center;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+#best-product p{
+  padding: 1em  ;
+}
+
+.acheter{
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+#best-product .change{
+    margin: 0 5px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: gray;
+}
+.image{
+    width: 50%;
+    margin-left: 5em;
+}
+.image img{
+   height: 70vh;
+   width: 100%;
+}
+.categorie{
+    padding: 1em 0;
+    text-align: center;
+}
+.categorie p{
+    color: white;
+    padding: 1em 0;
+    background-color: black;
+    font-size: 24px;
+}
+.produit p{
+    color: black;
+    background-color: white;
+}
+.categoriei{
+    padding: 1em;
+    text-align: right;
+}
+.produit{
+    border: black solid;
+    width: 30%;
+   text-align: center;
+  padding: 10px 5%;
+   margin-left: 1em;
+}
+.produit button{
+    padding: 10px; 
+    border-radius: 10px;
+    border: none;
+    background-color: orange;
+    margin-top: 10px;
+}
+.produit img{
+    width: 10em;
+}
+.produits{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.plus{
+    padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+footer{
+    background-color: black ;
+    color: white;
+    height: 5em;
+}
+@media screen and (max-width:960px) {
+    .produit{
+        width: 100em;
+        margin-left: 2em;
+        margin-right: 0;
+        padding: 5em 4em;
+    }
+    .produits{
+        display: flex;
+        justify-content: space-between;
+        overflow: scroll;
+    }
+    #best-product{
+        display: none;
+    }
+    #user-data{
+        height: 10em;
+        width: 20em;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        z-index: 1;
+        margin-right: 20px;
+    }
+    header{
+        font-size: 10px;
+    }
+   
+}
