@@ -18,7 +18,7 @@ function GetData() {
 
 function ADDdata() {
     // Vérifier si l'utilisateur existe déjà
-    const existingUser  = userData.find(user => user.username === data.username || user.password || data.password || user.email === data.email);
+    const existingUser  = userData.find(user => user.username === data.username || user.email === data.email);
     console.log(!existingUser);
     if (!existingUser ) {
         // Si l'utilisateur n'existe pas, ajouter les données
