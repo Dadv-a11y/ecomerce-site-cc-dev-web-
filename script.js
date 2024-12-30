@@ -64,7 +64,7 @@ async function fillMenu() {
      }  
      
 }
- 
+   let panierData = JSON.parse(sessionStorage.getItem('panierdata')) || [];
 let quantite = sessionStorage.getItem('quantite')||0
 panier.textContent= quantite
 async function fillProduit() {
@@ -82,7 +82,7 @@ async function fillProduit() {
 
         const produitsDiv = document.createElement('div');
         produitsDiv.classList.add('produits');
-
+       
         data.forEach(produit => {
             if (produit.categorie === categorie) {
                 const div = document.createElement('div');
@@ -98,16 +98,11 @@ async function fillProduit() {
                 div.appendChild(p);
                 div.appendChild(br);
                 div.appendChild(prix);
+                // pour gerer l'ajout des elements au panier panier
                 let button = document.createElement('button')
                 button.classList.add('ajouteraupanier');
                 button.textContent = 'Ajouter au panier';
-                 button.addEventListener('click',function(){
-                    quantite++
-                  console.log(quantite)
-                  panier.textContent= quantite
-                 sessionStorage.setItem('quantite', quantite)
-            })
-    
+                ajoutpanier(button , produit)
                 div.appendChild(button)
                 // chaque produit est ajouté à la div produits
                 produitsDiv.appendChild(div);
@@ -250,3 +245,33 @@ async function ResultatRecherche() {
 }
 
 
+function paniers(){
+   window.location.href='page du panier/panier.html'
+}
+ function ajoutpanier(button , produit){
+    let i =0 
+    button.addEventListener('click', function() {    
+        let exist = false
+         let data = {} ;                  
+         data.nom = produit.nom;
+         data.prix = produit.prix;
+         data.quantite = ++i; 
+       if(panierData.length !=0){
+          for (const key in panierData) {
+             if(panierData[key].nom == data.nom){
+                panierData[key].quantite++
+                exist = true
+             }
+          }
+       }
+        if(!exist){
+         panierData.push(data);
+         console.log(exist)
+        }
+         console.log(panierData);
+         sessionStorage.setItem('panierdata', JSON.stringify(panierData)); 
+     quantite++;
+     panier.textContent = quantite;
+     sessionStorage.setItem('quantite', quantite);
+ });
+ }

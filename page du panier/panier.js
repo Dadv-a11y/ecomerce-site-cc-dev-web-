@@ -81,59 +81,53 @@ function login() {
        displayuser = 1 ;
     }
    }
-
    let panierData = JSON.parse(sessionStorage.getItem('panierdata')) || [];
    let quantite = sessionStorage.getItem('quantite')||0
    panier.textContent= quantite
    let title = document.getElementById('title')
    let carteProduit = document.getElementById('carteProduit')
-   let resultat = JSON.parse(sessionStorage.getItem('resultatRecherche'))
-   
-     // fonction pour creer le contenu de page produit
-     async function fillpageResultat() {
+ 
+    //  fonction pour creer le contenu de page produit
+     async function fillpagePanier() {
+        if(panierData.length == 0){
+           carteProduit.innerText = ' pas de produit achete'
+        }
+        let src 
         const data = await catalogue;
-        carteProduit.innerHTML = ''; // Réinitialiser le contenu de carteProduit
-        let p1 = document.createElement('p');
-        p1.appendChild(document.createTextNode(`Nombre de résultats: ${resultat.length}`));
-        carteProduit.appendChild(p1); // Ajouter le nombre de résultats à carteProduit
-    
-        for (const element of resultat) {
+        for (let element of panierData) {
             console.log(element)
                 const div1 = document.createElement('div');
                 div1.classList.add('imageproduit');
                 let img = document.createElement('img');
-                img.src = '../' + element.src;
+                for (const key in data) {
+                   if(data[key].nom == element.nom){
+                    src = data[key].src
+                   }
+                }
+                img.src = '../' + src;
                 div1.appendChild(img);
-    
                 const div2 = document.createElement('div');
                 div2.classList.add('descriptionproduit');
                 const div3 = document.createElement('div');
                 div3.classList.add('presentationduproduit');
-    
                 let p = document.createElement('p');
                 p.appendChild(document.createTextNode(element.nom));
-                p.appendChild(document.createElement('br'));
-                p.appendChild(document.createTextNode('Couleur: ' + element.couleur));
                 let prix = element.prix * 624;
                 p.appendChild(document.createElement('br'));
                 p.appendChild(document.createTextNode(prix + ' fcfa'));
                 p.appendChild(document.createElement('br'));
-                let button = document.createElement('button');
-                button.classList.add('ajouteraupanier');
-                button.textContent = 'Ajouter au panier';
-                ajoutpanier(button , element)
-                const caracteristiques = element.caracteristiques;
-                for (const key in caracteristiques) {
-                    p.appendChild(document.createTextNode(`${key}: ${caracteristiques[key]}`));
-                    p.appendChild(document.createElement('br'));
-                }
-                p.appendChild(button);
+                let quantite = document.createElement('p');
+                quantite.textContent = 'quantite:'+''+'x'+ element.quantite;
+                p.appendChild(quantite);
                 div2.appendChild(p)
                 div3.appendChild(div1)
                 div3.appendChild(div2)
                 carteProduit.appendChild(div3)
             }
         }
+        function paniers(){
+            window.location.href='panier.html'
+         }
     
         async function ResultatRecherche() {
             const data = await catalogue;
@@ -147,7 +141,7 @@ function login() {
              }
              else{
                 sessionStorage.setItem('resultatRecherche', JSON.stringify(filteredProducts))
-                window.location.href='pageresultat.html'
+                window.location.href='../page de resultat/pageresultat.html'
              }
             
             console.log(filteredProducts); // Affiche les produits qui correspondent à la recherche
@@ -156,34 +150,4 @@ function login() {
 
 
 
-    document.addEventListener('DOMContentLoaded', fillpageResultat)
-    function ajoutpanier(button , produit){
-        let i =0 
-        button.addEventListener('click', function() {    
-            let exist = false
-             let data = {} ;                  
-             data.nom = produit.nom;
-             data.prix = produit.prix;
-             data.quantite = ++i; 
-           if(panierData.length !=0){
-              for (const key in panierData) {
-                 if(panierData[key].nom == data.nom){
-                    panierData[key].quantite++
-                    exist = true
-                 }
-              }
-           }
-            if(!exist){
-             panierData.push(data);
-             console.log(exist)
-            }
-             console.log(panierData);
-             sessionStorage.setItem('panierdata', JSON.stringify(panierData)); 
-         quantite++;
-         panier.textContent = quantite;
-         sessionStorage.setItem('quantite', quantite);
-     });
-     }
-     function paniers(){
-        window.location.href='../page du panier/panier.html'
-     }
+     document.addEventListener('DOMContentLoaded', fillpagePanier)

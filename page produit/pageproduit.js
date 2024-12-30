@@ -81,13 +81,15 @@ function login() {
        displayuser = 1 ;
     }
    }
+
+   let panierData = JSON.parse(sessionStorage.getItem('panierdata')) || [];
    let panier = document.getElementById('panier')
    let quantite = sessionStorage.getItem('quantite')||0
    panier.textContent= quantite
    let title = document.getElementById('title')
    let carteProduit = document.getElementById('carteProduit')
+   // pour recuperer la categorie selectionner dans le menu
    let produitAafficher = sessionStorage.getItem('pageproduit')
-   console.log(produitAafficher , 'test')
      title.textContent = produitAafficher 
 
      // fonction pour crrer le contenu de page produit
@@ -115,12 +117,7 @@ function login() {
             let button = document.createElement('button')
             button.classList.add('ajouteraupanier')
             button.textContent='ajouter au panier'
-            button.addEventListener('click',function(){
-                quantite++
-                console.log(quantite)
-                panier.textContent= quantite
-               sessionStorage.setItem('quantite', quantite)
-            })
+            ajoutpanier(button , produit)
             const caracteristiques = produit.caracteristiques
             for (const key in caracteristiques) {
                 p.appendChild(document.createTextNode(`${key}: ${caracteristiques[key]}`));
@@ -155,4 +152,33 @@ function login() {
         console.log(filteredProducts); // Affiche les produits qui correspondent à la recherche
     }
     
-    
+    function ajoutpanier(button , produit){
+        let i =0 
+        button.addEventListener('click', function() {    
+            let exist = false
+             let data = {} ;                  
+             data.nom = produit.nom;
+             data.prix = produit.prix;
+             data.quantite = ++i; 
+           if(panierData.length !=0){
+              for (const key in panierData) {
+                 if(panierData[key].nom == data.nom){
+                    panierData[key].quantite++
+                    exist = true
+                 }
+              }
+           }
+            if(!exist){
+             panierData.push(data);
+             console.log(exist)
+            }
+             console.log(panierData);
+             sessionStorage.setItem('panierdata', JSON.stringify(panierData)); 
+         quantite++;
+         panier.textContent = quantite;
+         sessionStorage.setItem('quantite', quantite);
+     });
+     }
+     function paniers(){
+        window.location.href='../page du panier/panier.html'
+     }

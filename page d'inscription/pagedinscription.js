@@ -11,7 +11,6 @@ function GetData() {
             let key = input.id; 
             let value = input.value;
             data[key] = value;
-            console.log(key, value);
         });
     }
 }

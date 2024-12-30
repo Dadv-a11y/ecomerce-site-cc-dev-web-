@@ -4,28 +4,32 @@
     box-sizing: border-box;
 }
 
-header{
+nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: black solid;
+    align-items: center;
+     border: black solid;  
+     border-top: 0;
+     border-left: 0;
+     border-right: 0;
+     margin-right: 2px;
+     list-style: none;
     /* padding: 1em; */
 }
-header img{
+nav li img{
     width: 50px;
     height: 100%;
 }
-header div{
-    padding: 1em;
-}
-header div button img{
+
+nav li button img{
     width: 25px;
 }
-header div button{
+nav li button{
     background-color: white;
     border: none;
 }
-header div a{
+nav li+li a{
     padding-left: 10px;
     color: black;
     text-decoration: none;
@@ -83,12 +87,12 @@ header div a{
      z-index: 1; 
     display: none; 
 }
-li{
+.menu li{
     padding: 0.5em 0;
     border-bottom:black solid ;
     list-style: none;
 }
-li button{
+.menu li button{
     border: none;
     background-color: white;
 }
@@ -146,21 +150,25 @@ li button{
     text-align: right;
 }
 .produit{
+    padding:  10px 5%;
+    background-color: white;
     border: black solid;
+    max-width: 18em;
     width: 30%;
-   text-align: center;
-  padding: 10px 5%;
+   text-align: center; 
    margin-left: 1em;
+   border-radius: 20px;
 }
 .produit button{
     padding: 10px; 
     border-radius: 10px;
     border: none;
     background-color: orange;
+    box-shadow: 0 0 10px 2px black;
     margin-top: 10px;
 }
 .produit img{
-    width: 10em;
+    width: 9em;
 }
 .produits{
     display: flex;
@@ -180,10 +188,12 @@ footer{
 }
 @media screen and (max-width:960px) {
     .produit{
+        padding: 0 0;
         width: 100em;
         margin-left: 2em;
         margin-right: 0;
         padding: 5em 4em;
+        height: 33em;
     }
     .produits{
         display: flex;
@@ -206,4 +216,8 @@ footer{
         font-size: 10px;
     }
    
+}
+button:active{
+    opacity: 0.7;
+    background-color: darkgray;
 }
