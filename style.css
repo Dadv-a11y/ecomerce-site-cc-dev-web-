@@ -184,7 +184,13 @@ nav li+li a{
 footer{
     background-color: black ;
     color: white;
-    height: 5em;
+    text-align: center;
+}
+footer nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 20px;
 }
 @media screen and (max-width:960px) {
     .produit{

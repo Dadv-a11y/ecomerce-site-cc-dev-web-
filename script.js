@@ -132,18 +132,23 @@ async function fillbestProduct(i) {
     if (imageElement) {
         imageElement.remove(); // Supprime l'élément avec l' acienne image
     }
+    let bestProducts = localStorage.getItem('bestProduct')||[];    
     
     //ajouter le nouveau contenu
     const data = await catalogue;
     const div = document.createElement('div');
     div.classList.add('image');
-    
+     
+    // Filter data to get matching products
+     const bestProductDetails = data.filter(item => 
+        bestProducts.includes(item.nom)
+    );
+    console.log(bestProductDetails)
     const img = document.createElement('img');
-    img.src = data[i].src;
-    
-    const nom = data[i].nom;
-    const caracteristiques = data[i].caracteristiques; 
-    const prix = data[i].prix * 624 + ' fcfa'; 
+    img.src = bestProductDetails[i].src;
+    const nom = bestProductDetails[i].nom;
+    const caracteristiques = bestProductDetails[i].caracteristiques; 
+    const prix = bestProductDetails[i].prix * 624 + ' fcfa'; 
     
     const p = document.createElement('p');
     p.appendChild(document.createTextNode(nom));
@@ -244,10 +249,10 @@ async function ResultatRecherche() {
     console.log(filteredProducts); // Affiche les produits qui correspondent à la recherche
 }
 
-
 function paniers(){
    window.location.href='page du panier/panier.html'
 }
+
  function ajoutpanier(button , produit){
     let i =0 
     button.addEventListener('click', function() {    

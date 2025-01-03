@@ -1,0 +1,105 @@
+#commander{
+    padding: 10px;
+    background-color: orange;
+    border-radius: 20px;
+    border: none;
+    border-width: 2px;
+}
+#commander:active{
+   background-color: black;
+   color: white;
+}
+
+.commande{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: black solid;
+    padding: 15px ;
+    background-color: black ;
+    color: white;
+    position: sticky;
+    bottom: 0;
+}
+#recu ul li img{
+    width: 50px;
+}
+
+#recu li{
+    padding: 10px;
+    list-style: none;
+}
+#recu li button{
+   border: none;
+}
+#recu li button:active{
+   background-color: black;
+   color: white;
+}
+#recu ul{
+    display: flex;
+    flex-direction: row;
+}
+.fermer{
+    position: relative;
+    left: 95%;
+    border:none;
+    background-color: white;
+}
+.fermer img{
+    width: 20px;
+}
+#recu ul+p+ul{
+    display: flex;
+    flex-direction: column;
+}
+.confirmer{
+    padding: 10px;
+    background-color: orange;
+    border-radius: 20px;
+    border: none;
+    border-width: 2px;
+    margin: 0 70px;
+}
+#recu{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#recu div{
+    background-color: white;
+    border: black solid ;
+    border-radius: 20px;
+    padding: 10px;
+    border: black solid;
+    border-radius: 20px;
+}
+@media screen and (min-width:1024px){
+    .commande{
+        margin-left: 73.4%;
+    }
+    #commander{
+        margin-left: 5px;
+    }
+}
+@media screen and (min-width:700px) and (max-width:1024px){
+    .commande{
+        margin-left: 50%;
+    }
+    #commander{
+        margin-left: 5px;
+    }
+}
+@media screen and (max-width:900px){
+    #recu div{
+        overflow: scroll;
+        height: 30em;
+    }
+}
