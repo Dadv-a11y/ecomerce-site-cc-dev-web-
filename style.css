@@ -9,12 +9,12 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-     border: black solid;  
-     border-top: 0;
-     border-left: 0;
-     border-right: 0;
-     margin-right: 2px;
-     list-style: none;
+    border: #FF6347 solid;  
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-right: 2px;
+    list-style: none;
     /* padding: 1em; */
 }
 nav li img{
@@ -31,7 +31,7 @@ nav li button{
 }
 nav li+li a{
     padding-left: 10px;
-    color: black;
+    color: #8B4513;
     text-decoration: none;
 }
 .tri{
@@ -40,7 +40,7 @@ nav li+li a{
     padding: 1em;
 }
 .tri input{
-    border: black solid; 
+    border: #FF6347 solid; 
     border-radius: 50px ;
     padding: 0.5em;
     text-align: center;
@@ -57,9 +57,9 @@ nav li+li a{
     font-size: 12px;
     font-weight: bold;
     display: none;
-    border: black solid;
+    border: #FF6347 solid;
     border-radius: 20px;
-    background-color: white;
+    background-color: #FFDAB9;
     position: absolute;
     right: 70px;
     z-index: 1;
@@ -69,32 +69,31 @@ nav li+li a{
   padding: 0 10px;
 }
 .barreDeRecherche{
- 
   border-radius: 50px;
 }
 .barreDeRecherche img{
     width: 20px;
-   position: relative;
-   top: 5px;
-   right: 30px;
+    position: relative;
+    top: 5px;
+    right: 30px;
 }
 .menu{
-    background-color: white; 
+    background-color: #FFDAB9; 
     position: absolute;
     padding: 0.5em 1em;
-    border: black solid;
+    border: #FF6347 solid;
     width: 15em;
-     z-index: 1; 
+    z-index: 1; 
     display: none; 
 }
 .menu li{
     padding: 0.5em 0;
-    border-bottom:black solid ;
+    border-bottom: #FF6347 solid;
     list-style: none;
 }
 .menu li button{
     border: none;
-    background-color: white;
+    background-color: #FFDAB9;
 }
 #best-product{
     font-size: 1.5em;
@@ -106,14 +105,19 @@ nav li+li a{
     align-items: center;
 }
 #best-product p{
-  padding: 1em  ;
+  padding: 1em;
+}
+
+video{
+    height: 70vh;
+    width: 100%;
 }
 
 .acheter{
     border-radius: 20px;
     padding: 10px 20px;
     border: none;
-    background-color: black;
+    background-color: #FF6347;
     color: white;
 }
 #best-product .change{
@@ -121,15 +125,15 @@ nav li+li a{
     padding: 5px 15px;
     border-radius: 20px;
     border: none;
-    background-color: gray;
+    background-color: #FFA07A;
 }
 .image{
     width: 50%;
     margin-left: 5em;
 }
 .image img{
-   height: 70vh;
-   width: 100%;
+    height: 70vh;
+    width: 100%;
 }
 .categorie{
     padding: 1em 0;
@@ -138,37 +142,40 @@ nav li+li a{
 .categorie p{
     color: white;
     padding: 1em 0;
-    background-color: black;
+    background-color: #FF6347;
     font-size: 24px;
 }
 .produit p{
-    color: black;
-    background-color: white;
+    color: #8B4513;
+    background-color: #FFDAB9;
 }
 .categoriei{
     padding: 1em;
     text-align: right;
 }
 .produit{
-    padding:  10px 5%;
-    background-color: white;
-    border: black solid;
+    padding: 10px 5%;
+    background-color: #FFDAB9;
+    border: #FF6347 solid;
     max-width: 18em;
     width: 30%;
-   text-align: center; 
-   margin-left: 1em;
-   border-radius: 20px;
+    text-align: center; 
+    margin-left: 1em;
+    border-radius: 20px;
 }
 .produit button{
     padding: 10px; 
     border-radius: 10px;
     border: none;
-    background-color: orange;
-    box-shadow: 0 0 10px 2px black;
+    background-color: #FFA07A;
+    box-shadow: 0 0 10px 2px #8B4513;
     margin-top: 10px;
 }
 .produit img{
     width: 9em;
+}
+.produit:hover{
+    transform: scale(0.9);
 }
 .produits{
     display: flex;
@@ -178,11 +185,11 @@ nav li+li a{
 .plus{
     padding: 10px 20px;
     border: none;
-    background-color: black;
+    background-color: #FF6347;
     color: white;
 }
 footer{
-    background-color: black ;
+    background-color: #FF6347;
     color: white;
     text-align: center;
 }
@@ -225,5 +232,5 @@ footer nav{
 }
 button:active{
     opacity: 0.7;
-    background-color: darkgray;
+    background-color: #CD5C5C;
 }

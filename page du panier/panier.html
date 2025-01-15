@@ -24,14 +24,15 @@
            </nav>
     </header>
     <main>
-        <div class="tri">
+        <section class="tri">
             <button><img src="../image/icon/menu.png" alt="menu" onclick="fillMenu()" id="menu-icon"></button>
             <div class="barreDeRecherche"><input type="text" placeholder="rechercher"  id="rechercher"><img src="../image/icon/loupe.png" alt="rechercher" onclick="ResultatRecherche()"></div>
-          </div>
-            <div class="menu" id="menu">
+        </section>
+          
+        <section class="menu" id="menu">
                
-            </div>
-            <div style="font-size: 24px; text-align: center; padding-bottom: 10px;"> votre panier</div>
+        </section>
+            <h1 style="font-size: 24px; text-align: center; padding-bottom: 10px;"> votre panier</h1>
             <section id="carteProduit">
                 <!-- <div class="presentationproduit">
                     <div class="imageproduit">
@@ -44,13 +45,13 @@
                            <button>ajouter au panier</button> 
                 </div> -->
             </section>     
-            </div>
+            
            <section id="recu">
-            <div id="recuContent">
+             <div id="recuContent">
              
-            </div>
-        </section>
-           <p class="commande"> verifier vos achats et ensuite <button id="commander" onclick="showrecu()">commander</button></p>
+             </div>
+           </section>
+           <p id="commande" class="commande"> verifier vos achats et ensuite <button id="commander" onclick="showrecu()">commander</button></p>
     </main>
     
 </body>

@@ -10,7 +10,7 @@ function verifyInput() {
     for (const input of inputs) {
         // Vérifier si le champ est vide
         if (input.value === "") {
-            input.placeholder = 'Veuillez remplir le champ';
+            input.placeholder = 'remplir le champ';
             input.style.borderColor = 'red';
             input.style.opacity = '1';
             allFilled = false; // Un champ est vide
@@ -23,6 +23,19 @@ function verifyInput() {
         }
     }
     return allFilled;
+}
+
+function handleInput(event) {
+    const input = event.target;
+    if (input.value !== "") {
+        input.placeholder = '';
+        input.style.borderColor = 'none';
+        input.style.opacity = '0.3';
+    } else {
+        input.placeholder = 'remplir le champ';
+        input.style.borderColor = 'red';
+        input.style.opacity = '1';
+    }
 }
 
 function createSession() {
@@ -41,8 +54,11 @@ function createSession() {
     }
 }
 
+for (const input of inputs) {
+    input.addEventListener('input', handleInput);
+}
+
 submitButton.addEventListener('click', function(e) {
     e.preventDefault();
-     createSession();
-   
+    createSession();
 });

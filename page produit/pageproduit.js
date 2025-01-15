@@ -101,6 +101,7 @@ function login() {
             div1.classList.add('imageproduit')
             let img = document.createElement('img')
             img.src ='../'+produit.src
+            img.alt = produit.nom
             div1.appendChild(img)
             const div2 = document.createElement('div')
             div2.classList.add('descriptionproduit')

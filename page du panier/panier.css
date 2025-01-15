@@ -1,12 +1,12 @@
 #commander{
     padding: 10px;
-    background-color: orange;
+    background-color: #FFB347; /* Warm orange */
     border-radius: 20px;
     border: none;
     border-width: 2px;
 }
 #commander:active{
-   background-color: black;
+   background-color: #FF6347; /* Tomato red */
    color: white;
 }
 
@@ -14,10 +14,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border: black solid;
+    border: #8B4513 solid; /* SaddleBrown */
     padding: 15px ;
-    background-color: black ;
-    color: white;
+    background-color: #FFDAB9; /* PeachPuff */
+    color: #8B4513; /* SaddleBrown */
     position: sticky;
     bottom: 0;
 }
@@ -33,7 +33,7 @@
    border: none;
 }
 #recu li button:active{
-   background-color: black;
+   background-color: #FF6347; /* Tomato red */
    color: white;
 }
 #recu ul{
@@ -44,7 +44,7 @@
     position: relative;
     left: 95%;
     border:none;
-    background-color: white;
+    background-color: #FFDAB9; /* PeachPuff */
 }
 .fermer img{
     width: 20px;
@@ -55,11 +55,14 @@
 }
 .confirmer{
     padding: 10px;
-    background-color: orange;
+    background-color: #FFB347; /* Warm orange */
     border-radius: 20px;
     border: none;
     border-width: 2px;
-    margin: 0 70px;
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: translate(6em);
 }
 #recu{
     position: absolute;
@@ -74,19 +77,40 @@
 }
 
 #recu div{
-    background-color: white;
-    border: black solid ;
+    background-color: #FFF5EE; /* Seashell */
+    border: #8B4513 solid; /* SaddleBrown */
     border-radius: 20px;
     padding: 10px;
-    border: black solid;
-    border-radius: 20px;
 }
+
+#recu table{
+    border-collapse: collapse;
+    margin:  20px 0;
+}
+
+#recu table tr th{
+   background-color: #FFB347; /* Warm orange */
+   color: #8B4513; /* SaddleBrown */
+}
+ 
+#recu table tr td{
+   padding: 10px;
+   letter-spacing: 1px;
+ }
+
+ #recu table tr {
+    border-bottom: #8B4513 solid; /* SaddleBrown */
+  }
+
 @media screen and (min-width:1024px){
     .commande{
         margin-left: 73.4%;
     }
     #commander{
         margin-left: 5px;
+    }
+    #recu{
+        bottom: -20vh;
     }
 }
 @media screen and (min-width:700px) and (max-width:1024px){
@@ -100,6 +124,6 @@
 @media screen and (max-width:900px){
     #recu div{
         overflow: scroll;
-        height: 30em;
+        max-height: 30em;
     }
 }
