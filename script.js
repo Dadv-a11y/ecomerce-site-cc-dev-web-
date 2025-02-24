@@ -11,7 +11,7 @@ console.log(menuicon);
 
 let displaymenu = 1;
 
-const catalogue = fetch('/catalogue.json').then((response) => {
+const catalogue = fetch('catalogue.json').then((response) => {
     if (!response.ok) {
         return console.log('Oops! Something went wrong.');
     }
@@ -34,7 +34,7 @@ async function fillMenu() {
             if (!categoriesAdded.has(categories)) {
                 categoriesAdded.add(categories);
                 const li = document.createElement('li');
-                const button = createButton(categories, 'page produit/pageproduit.html');
+                const button = createButton(categories, 'page produit/pageproduit.html',categories);
                 li.appendChild(button);
                 ul.appendChild(li);
             }
@@ -96,8 +96,13 @@ async function fillProduit() {
 }
 
 document.addEventListener('DOMContentLoaded', fillProduit);
-
+let tableauStatistique = JSON.parse(localStorage.getItem('tableauStatistique')) || [];
+if(tableauStatistique.length !=0){
+    const sortedData = tableauStatistique.sort((a, b) => b.quantite - a.quantite);
+let bestProducts = [ sortedData[0].nom , sortedData[1].nom , sortedData[3].nom]
+localStorage.setItem('bestProduct', bestProducts)
 fillbestProduct(0);
+}
 
 async function fillbestProduct(i) {
     const imageElement = document.querySelector('#best-product .image');
@@ -177,7 +182,7 @@ if(ischange.length !=0){
 }else{
     div= document.createElement('div');
     div.classList.add('video');
-    bestProduct.innerHTML =` <video controls autoplay loop>
+    bestProduct.innerHTML =` <video  autoplay loop>
      <source src="VIDEO/presentation.mp4" type="video/mp4"></source>
      </video>`
     //  bestProduct.appendChild(div);
@@ -239,6 +244,7 @@ function ajoutpanier(button, produit) {
         let data = {};
         data.nom = produit.nom;
         data.prix = produit.prix;
+        data.src = produit.src ;
         data.quantite = ++i;
         if (panierData.length != 0) {
             for (const key in panierData) {
@@ -276,5 +282,14 @@ function createButton(text, href, produit) {
     }
     return button;
 }
+
+ let admin  = JSON.parse(sessionStorage.getItem('session')) || {};
+ if(admin.email== "admin" && admin.password ==  "admin" && admin.length != 0 ){
+    DASHBOARD.style.display='inline';
+ }
+ else{
+    let DASHBOARD = document.getElementById('DASHBOARD');
+    DASHBOARD.style.display ='none';
+ }
 
  

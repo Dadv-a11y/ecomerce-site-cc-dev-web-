@@ -160,6 +160,7 @@ function login() {
              let data = {} ;                  
              data.nom = produit.nom;
              data.prix = produit.prix;
+             data.src = produit.src ;
              data.quantite = ++i; 
            if(panierData.length !=0){
               for (const key in panierData) {

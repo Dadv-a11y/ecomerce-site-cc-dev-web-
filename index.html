@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/image/icon/petit logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="image/icon/petit logo.png" type="image/x-icon">
     
     <title>Accueil</title>
 
@@ -16,17 +16,18 @@
         <li><a href="index.html"><img src="image/icon/petit logo.png" alt="logo"></a></li>
         <li><a href="page d'inscription/pagedinscription.html">S'INSCRIRE</a>
               <a href="page de connexion/connexion.html">CONNECTEZ-VOUS</a>
+              <a href="dashboard/dashboard.html" id="DASHBOARD">DASHBOARD</a>
              <div id="user-data"></div>  
         </li>
         <li>
-             <button onclick="login()"><img src="/image/icon/utilisateur.png" alt="user"></button>
-             <button onclick="paniers()" ><img src="/image/icon/panier.png" alt="panier"><span id="panier"></span></button>
+             <button onclick="login()"><img src="image/icon/utilisateur.png" alt="user"></button>
+             <button onclick="paniers()" ><img src="image/icon/panier.png" alt="panier"><span id="panier"></span></button>
         </li>
        </nav>
     </header>
     <main>
         <section class="tri">
-        <button><img src="/image/icon/menu.png" alt="menu" onclick="fillMenu()" id="menu-icon"></button>
+        <button><img src="image/icon/menu.png" alt="menu" onclick="fillMenu()" id="menu-icon"></button>
         <div class="barreDeRecherche"><input type="text" placeholder="rechercher"  id="rechercher"><img src="image/icon/loupe.png" alt="rechercher" onclick="ResultatRecherche()"></div>
         </section>
         <section class="menu" id="menu">
@@ -46,7 +47,7 @@
                
           </div>  -->
         </section>
-        <section class="categorie" id="categorie">
+        <section class="categorie" id="categorie" >
             <!-- <p>categorie1</p>
           <div class="categoriei">
            <div class="produits">
@@ -58,16 +59,47 @@
             <button class="plus">plus</button>
           </div> -->
         </section>
-        <footer>
-          <p>nos reseaux sociaux</p>
-           <nav>
-            <li><a href="https://facebook.com/"><img src="../image/icon/facebook.png" alt="facebook" ></a></li>
-            <li><a href="https://instagram.com/"><img src="../image/icon/instagram.png" alt="instagram" ></a></li>
-            <li><a href="https://web.whatsapp.com/"><img src="../image/icon/whatsapp.png" alt="whatsapp" ></a></li>
-            <li><a href="https://twitch.com/"><img src="../image/icon/sociale.png" alt="twitter" ></a></li>
-           </nav>
-           <p><a href="../dashboard/dashboard.html">statitique</a></p>
-        </footer>
+
+       <!-- footer -->
+<footer class="footer">
+  <div class="footer-container">
+      <!-- Left Section -->
+      <div class="footer-section address">
+          <h2>DADV Shop.</h2>
+          <p>XXXXXXXXXXX,</p>
+          <p>XXXXXXXX</p>
+      </div>
+      <!-- Links Section -->
+      <div class="footer-section links">
+          <h3>Links</h3>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+      </div>
+      <!-- Help Section -->
+      <div class="footer-section help">
+          <h3>Help</h3>
+          <ul>
+              <li><a href="#">Payment Options</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Privacy Policies</a></li>
+          </ul>
+      </div>
+      <!-- Newsletter Section -->
+      <div class="footer-section newsletter">
+          <h3>Newsletter</h3>
+          <form action="#">
+              <input type="email" placeholder="Enter Your Email Address" required>
+              <button type="submit">SUBSCRIBE</button>
+          </form>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>2025 DADV shop. All rights reserved</p>
+  </div>
+</footer>
     </main>
     <script src="script.js"></script>
 </body>

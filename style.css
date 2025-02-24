@@ -147,6 +147,7 @@ video{
 }
 .produit p{
     color: #8B4513;
+    padding: 0.5em 0;
     background-color: #FFDAB9;
 }
 .categoriei{
@@ -154,11 +155,11 @@ video{
     text-align: right;
 }
 .produit{
-    padding: 10px 5%;
+    padding: 5px ;
     background-color: #FFDAB9;
     border: #FF6347 solid;
     max-width: 18em;
-    width: 30%;
+    width: 20em;
     text-align: center; 
     margin-left: 1em;
     border-radius: 20px;
@@ -170,35 +171,136 @@ video{
     background-color: #FFA07A;
     box-shadow: 0 0 10px 2px #8B4513;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 .produit img{
-    width: 9em;
+    width: 100%;
+    border-radius: 10px;
 }
 .produit:hover{
     transform: scale(0.9);
 }
 .produits{
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
+   display: grid;
+   grid-template-columns: repeat(20 , 1fr);
 }
+
 .plus{
     padding: 10px 20px;
     border: none;
     background-color: #FF6347;
     color: white;
 }
-footer{
-    background-color: #FF6347;
-    color: white;
-    text-align: center;
+.footer {
+    background-color: #FFA07A;
+    padding: 40px 20px;
+    border-top: 1px solid #ddd;
+    width: 100%;
 }
-footer nav{
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer-section {
+        margin: 15px 0;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1324px) {
+    .footer{
+        width: 100%;
+        flex-wrap: wrap;    
+    }
+}
+
+.footer-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-top: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
+.footer-section {
+    flex: 1;
+    margin: 0 15px;
+    min-width: 200px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ff8c42;
+}
+
+
+.footer-section.newsletter form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-section.newsletter input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.footer-section.newsletter button {
+    padding: 10px 15px;
+    background-color: #FF6347;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.footer-section.newsletter button:hover {
+    background-color: #FF6347;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #999;
+}
+
 @media screen and (max-width:960px) {
     .produit{
         padding: 0 0;

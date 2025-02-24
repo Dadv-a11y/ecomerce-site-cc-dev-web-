@@ -32,6 +32,10 @@ img{
      color: white;
 }
 
+.menu{
+  top: 100px;;
+}
+
 @media screen and (min-width: 820px) {
     #carteProduit{
     display: grid;

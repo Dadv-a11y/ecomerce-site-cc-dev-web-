@@ -139,6 +139,7 @@ let bestProduct = [ sortedData[0].nom , sortedData[1].nom , sortedData[3].nom]
 localStorage.setItem('bestProduct', bestProduct)
 
 const tableHTML = `
+   <p id="table">  tableau recapitulatif des ventes </p>
     <table id="productTable" style="width: 100%; margin-top: 20px; border-collapse: collapse;">
         <thead>
             <tr style="background-color: #f2f2f2;">
@@ -156,7 +157,7 @@ const tableHTML = `
                 </tr>
             `).join('')}
         </tbody>
-    </table>
+    </table> 
 `;
 
 document.body.insertAdjacentHTML('beforeend', tableHTML);

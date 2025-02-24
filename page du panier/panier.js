@@ -259,6 +259,7 @@ async function confirmPurchase() {
             nom: item.nom,
             quantite: item.quantite,
             prix: item.prix,
+            src: item.src,
             date: new Date().toISOString()
             });
         } }
