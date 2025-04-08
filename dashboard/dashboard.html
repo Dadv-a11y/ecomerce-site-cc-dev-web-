@@ -4,54 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <style>
-        .dashboard {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .card {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 16px;
-            margin: 8px;
-            width: 200px;
-            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
-        }
-        p{
-            text-align: center;
-        }
-        .chart-wrapper{
-            width: 30em;
-            height: 30em;
-        }
-        body{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .sidebar{
-           width: 15em;
-           font-size: 24px;
-           font-weight: bold;
-        }
-        .sidebar div{
-       padding: 45px 20px;
-        }
-        .sidebar div a{
-            text-decoration: none;
-            color: black;
-            position: fixed;
-            z-index: 1;
-        }
-        #table{
-            opacity: 0;
-        }
-        .content{
-            width: 50em;
-        }
-        
-        
-    </style>
-      <script>/**
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Linking CSS file -->
+    <link rel="stylesheet" href="dashboard.css">
+    <script>/**
         * Skipped minification because the original files appears to be already minified.
         * Original file: /npm/chart.js@4.4.7/dist/chart.umd.js
         *
@@ -73,22 +30,47 @@
        //# sourceMappingURL=chart.umd.js.map</script>
 </head>
 <body>
-    <div class="sidebar">
-   <div><a href="../index.html">Accueil</div> 
-   <div><a href="#dashboard">utilisateur</a></div> 
-   <div><a href="#categoryChart">produit disponible</a></div> 
-   <div><a href="#salesChart">ventes par categorie</a></div> 
-   <div><a href="#table">recapitulatif vente</a></div> 
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h3>DADVSHOP Dashboard</h3>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="dashboard.html" class="active"><i class="fa fa-chart-line"></i> Dashboard</a></li>
+            <li><a href="../cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+            <li><a href="../page de connexion/connexion.html"><i class="fa fa-user"></i> Login</a></li>
+        </ul>
+    </nav>
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h2>Dashboard</h2>
+        </header>
+        <section class="cards">
+            <div class="card">
+                <h3>Total Sales</h3>
+                <p>$50,000</p>
+            </div>
+            <div class="card">
+                <h3>New Users</h3>
+                <p>1,200</p>
+            </div>
+            <div class="card">
+                <h3>Products Sold</h3>
+                <p>3,400</p>
+            </div>
+        </section>
+        <section class="charts">
+            <div class="chart-container">
+                <canvas id="salesChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="usersChart"></canvas>
+            </div>
+        </section>
     </div>
-   <div class="content">
-    <p id="nombreUtilisateur">le nombre d'utilisateur est de :</p>
-    <div class="dashboard" id="dashboard"></div>
-    <canvas id="categoryChart" width="400" height="200"></canvas>
-    <div class="chart-wrapper" id="chart-wrapper">
-        <canvas id="salesChart"></canvas>
-    </div>
-</div>
+    <!-- Linking JS file -->
+    <script src="dashboard.js"></script>
 </body>
-<script src="dashboard.js">    
-</script>
 </html>
