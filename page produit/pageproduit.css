@@ -1,53 +1,20 @@
-.imageproduit{
-  width: 50%;
-  padding: 10px;
-}
-img{
-    width: 100%;
-}
-.descriptionproduit{
-  width: 50%;
-  padding-top: 20px;
-  padding-left: 20px;
-  font-size: 15px;
-  font-weight: 700;
-  padding-bottom: 20px;
-  color: #5D4037; /* Warm brown color */
-}
-.presentationduproduit{
-    display: flex;
-    flex-direction: row;
-    border-bottom: #D32F2F solid; /* Warm red color */
-}
-.descriptionproduit p span{
-    padding-left: 20px;
-    margin-left: 5px; 
-}
-.ajouteraupanier{
-     padding: 10px; 
-     border-radius: 10px;
-     border: none;
-     background-color: #FF7043; /* Warm orange color */
-     margin-top: 10px;
-     color: white;
-}
+#carteProduit{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  }
 
-.menu{
-  top: 100px;;
-}
-
-@media screen and (min-width: 820px) {
+  
+@media screen and (max-width: 800px) {
     #carteProduit{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     }
-    .presentationduproduit{
-        border-left: #D32F2F solid; /* Warm red color */
-    }
-    .presentationduproduit img{
-       height: 100%;
-    }
-    .descriptionproduit{
-        font-size: 20px;
-      }
+   
+}
+@media screen and (max-width: 500px) {
+  #carteProduit{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  }
+ 
 }

@@ -4,47 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/image/icon/petit logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="pageproduit.css">
+    <link rel="stylesheet" href="../style.css">
     <title id="title">produit</title>
 </head>
 <body>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>DADVSHOP</h3>
+        </div>
+        <ul class="sidebar-menu" id="sidebar-menu">
+            <li><a href="../index.html" class="active"><i class="fa fa-home"></i> Home</a></li>
+            <li id="DASHBOARD"><a href="../dashboard/dashboard.html"><i class="fa fa-chart-line"></i> Dashboard</a></li>
+            <li><a href="../cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+            <li><a href="../page de connexion/connexion.html"><i class="fa fa-user"></i> Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content " id="main-content" style=" margin-top: 12rem;">
     <header>
-        <nav>
-            <li><a href="../index.html"><img src="../image/icon/petit logo.png" alt="logo"></a></li>
-            <li><a href="../page d'inscription/pagedinscription.html">S'INSCRIRE</a>
-                  <a href="../page de connexion/connexion.html">CONNECTEZ-VOUS</a>
-                 <div id="user-data"></div>  
+    
+    <!-------Main Nav-------->
+    <nav class="nav">
+        <div class="container nav_container">
+            <a href="../index.html" class="nav_logo">DADVSHOP</a>
+            <ul class="nav_list">
+                <li> <button class="sidebar-toggle"><img src="../image/icon/menu.png" alt="menu" class="icon"></button></li>
+                <li class="nav_item"><a href="../index.html" class="nav_link">Home</a></li>
+                <li class="nav_item"><a href="#" class="nav_link">About Us</a></li>
+                <li class="nav_item"><a href="#" class="nav_link">Contact</a></li>
+                <li class="nav_item"><a href="../page de connexion/connexion.html" class="nav_link">connectez-vous</a></li>
+            </ul>
+            <div class="social">
+                <form action="#" class="nav_form">
+                    <input type="text" class="nav_input" placeholder="What are you looking for?"id="rechercher"/>
+                    <img src="../image/icon/loupe.png" alt="loupe.png" class="icon" onclick="ResultatRecherche()">
+                </form>
+                <i class="fa-regular fa-heart" class="heart"></i>
+                <a href="../cart.html">
+                   <img src="../image/icon/panier.png" alt="panier" class="icon">
+                </a>
+            </div>
+            <span class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </span>
+        </div>
+    </nav>
+    <!-------Mobile Nav-------->
+    <nav class="mob_nav mob_hidden">
+        <ul class="mob_list">
+            <li class="mob_item">
+                <a href="/" class="mob_link">Home</a>
             </li>
-            <li>
-                 <button onclick="login()"><img src="../image/icon/utilisateur.png" alt="user"></button>
-                 <button onclick="paniers()" ><img src="../image/icon/panier.png" alt="panier"><span id="panier"></span></button>
+            <li class="mob_item">
+                <a href="#" class="mob_link">About Us</a>
             </li>
-           </nav>
+            <li class="mob_item">
+                <a href="#" class="mob_link">Contact</a>
+            </li>
+            <li class="mob_item">
+                <a href="signup.html" class="mob_link">Sign Up</a>
+            </li>      
+            <li class="mob_item">
+                <a href="cart.html" class="mob_link">Cart</a>
+            </li>      
+        </ul>
+    </nav>
     </header>
-    <main>
-        <section class="tri">
-            <button><img src="../image/icon/menu.png" alt="menu" onclick="fillMenu()" id="menu-icon"></button>
-            <div class="barreDeRecherche"><input type="search" placeholder="rechercher"  id="rechercher"><img src="../image/icon/loupe.png" alt="rechercher" onclick="ResultatRecherche()"></div>
-          </div>
-            <div class="menu" id="menu">
-               
+    <main>        
             </section>
             <section id="carteProduit">
-                <!-- <div class="presentationproduit">
-                    <div class="imageproduit">
-                        <img src="../image/ordinateur-image/Asus ROG Zephyrus.png"  >
-                    </div>
-                    <div class="descriptionproduit">
-                        <p>nom <span>djifack</span> <br>
-                           prenom <span>daril</span> <br>
-                           texte <span></span></p>
-                           <button>ajouter au panier</button> 
-                </div> -->
-                </div>     
+                   
             </section>
     </main>
-    
+    <footer class="footer">
+        <div class="container footer_container">
+            <div class="footer_items">
+                <h3 class="footer_title">Know Us</h3>
+                <ul class="footer_list">
+                    <li class="li footer_itm">Careers</li>
+                    <li class="li footer_itm">Blog</li>
+                    <li class="li footer_itm">Relations</li>
+                    <li class="li footer_itm">Devices</li>
+                </ul>
+            </div>
+            <div class="footer_items">
+                <h3 class="footer_title">Support</h3>
+                <ul class="footer_list">
+                    <li class="li footer_itm">DADVshop@gmail.com</li>
+                    <li class="li footer_itm">+91 6535784514</li>
+                    <li class="li footer_itm">+91 3669578123</li>
+                </ul>
+            </div>
+            <div class="footer_items">
+                <h3 class="footer_title">Earn with Us</h3>
+                <ul class="footer_list">
+                    <li class="li footer_itm">Become an Affiliate</li>
+                    <li class="li footer_itm">Become a Seller</li>
+                    <li class="li footer_itm">Run ads on Product</li>
+                    <li class="li footer_itm">See More Make Money with Us</li>
+                </ul>
+            </div>
+            <div class="footer_items">
+                <h3 class="footer_title">Help Desk</h3>
+                <ul class="footer_list">
+                    <li class="li footer_itm">Your Account</li>
+                    <li class="li footer_itm">Your Orders</li>
+                    <li class="li footer_itm">Returns & Replacements</li>
+                    <li class="li footer_itm">Shipping Rates & Policies</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="container bottom_container">
+                <p class="copyright">
+                    © Copyright DADVshop 2024. All rights reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+    </div>
 </body>
 <script src="pageproduit.js"></script>
 </html>
