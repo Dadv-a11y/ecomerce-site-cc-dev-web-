@@ -371,18 +371,6 @@
                   "technologie": "LED"
                 },
                 "categorie": "Télévisions"
-              },
-              {
-                "nom": "TCL 40S325",
-                "couleur": "Noir",
-                "prix": 299,
-                 "src": "image/television-image/TCL 40S325.png",
-                "caracteristiques": {
-                  "écran": "40 pouces",
-                  "résolution": "1920 x 1080",
-                  "technologie": "LED"
-                },
-                "categorie": "radio"
               }
             
         ]
